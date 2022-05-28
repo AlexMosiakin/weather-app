@@ -5,8 +5,8 @@
     padding: 40px;
     max-width: 750px;
     width: 100%;
-    background: $lite-background;
-    box-shadow: $box-shadow;
+    background: var(#{--components-background-default});
+    box-shadow: var(#{--card-shadow-default});
     border-radius: $border-radius;
     .this_day_info_items{
         z-index: 1;
@@ -32,8 +32,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #fff;
-        box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+        background: var(#{--components-background-default});
+        box-shadow: var(#{--card-shadow-default});
         border-radius: 50%;
     }
 
@@ -44,7 +44,7 @@
 
     .indicator_value{
         font-size: 14px;
-        color: $lite-color;
+        color: var(#{--text-color-default});
     }
 }
 

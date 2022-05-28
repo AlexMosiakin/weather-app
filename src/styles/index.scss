@@ -8,10 +8,27 @@
 body{
     font-family: 'Nunito', sans-serif;
     position: relative;
+    background: var(#{--body-background-default});
 }
 
 .container{
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 20px 0;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    transition: 0.5s;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(#{text-color-default});
+    transition: 0.5s;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4793ff;
+    border-radius: 8px;
+    transition: 0.5s;
+  }

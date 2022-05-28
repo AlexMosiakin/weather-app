@@ -4,8 +4,8 @@
     padding: 20px;
     max-width: 400px;
     width: 100%;
-    background: $lite-background;
-    box-shadow: $box-shadow;
+    background: var(#{--components-background-default});
+    box-shadow: var(#{--card-shadow-default});
     border-radius: $border-radius;
 }
 
@@ -29,7 +29,7 @@
 
     .this_day_name{
         font-size: 40px;
-        color: $lite-color;
+        color: var(#{--text-color-default});
     }
 }
 
