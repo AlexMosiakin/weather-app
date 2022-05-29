@@ -15,8 +15,27 @@ type Response = {
 
 const initialState: CurrentWeather = {
     weather: {
+        dt: 1653837921,
         main:{
-            temp: 0,
+            feels_like: 15.27,
+            humidity: 45,
+            pressure: 1012,
+            temp: 16.4,
+            temp_max: 16.4,
+            temp_min: 13.73,
+        },
+        name: "Nizhny Novgorod",
+        weather: [
+            {
+                description: "облачно с прояснениями",
+                icon: "04d",
+                id: 803,
+                main: "Clouds",
+            }
+        ],
+        wind:{
+            deg: 123,
+            speed: 23
         }
     },
     isLoading: false,
