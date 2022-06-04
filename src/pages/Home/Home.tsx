@@ -6,20 +6,24 @@ import Days from './components/Days/Days'
 import { useCustomDispatch, useCustomSelector } from '../../hooks/store'
 import { fetchCurrentWeather } from '../../store/thunk/fetchCurrentWeather'
 import { useSelector } from 'react-redux'
-import { selectCurrentWeatherData } from '../../store/selectors'
+import { selectCurrentCityData, selectCurrentWeatherData } from '../../store/selectors'
 
 interface Props {}
 
 const Home = (props: Props) => {
-  
   const dispatch = useCustomDispatch();
+
+  const select = useCustomSelector(
+    selectCurrentCityData
+  )
+
   const { weather } = useCustomSelector(
     selectCurrentWeatherData
   )
 
   useEffect(() => {
-    dispatch(fetchCurrentWeather('nizhny novgorod'))
-  }, [])
+    dispatch(fetchCurrentWeather(select.label))
+  }, [select])
   
   return (
     <div className={s.home}>
@@ -33,3 +37,7 @@ const Home = (props: Props) => {
 }
 
 export default Home
+
+function useState(arg0: string): [any, any] {
+  throw new Error('Function not implemented.')
+}

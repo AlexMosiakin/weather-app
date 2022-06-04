@@ -28,7 +28,7 @@ const Days = (props: Props) => {
         {
             day:"Завтра",
             day_info:"29 авг",
-            icon_id:"small_rain_sun",
+            icon_id:"пасмурно_sun",
             temp_day:"+15°",
             temp_night:"+10°",
             info:"Небольшой дождь",
@@ -36,7 +36,7 @@ const Days = (props: Props) => {
         {
             day:"Пн",
             day_info:"28 авг",
-            icon_id:"small_rain",
+            icon_id:"пасмурно",
             temp_day:"+18°",
             temp_night:"+15°",
             info:"Облачно",
@@ -44,7 +44,7 @@ const Days = (props: Props) => {
         {
             day:"Вт",
             day_info:"28 авг",
-            icon_id:"mainly_cloudy",
+            icon_id:"облачно с прояснениями",
             temp_day:"+18°",
             temp_night:"+15°",
             info:"Облачно",
@@ -52,7 +52,7 @@ const Days = (props: Props) => {
         {
             day:"Ср",
             day_info:"28 авг",
-            icon_id:"mainly_cloudy",
+            icon_id:"облачно с прояснениями",
             temp_day:"+18°",
             temp_night:"+15°",
             info:"Облачно",
@@ -60,7 +60,7 @@ const Days = (props: Props) => {
         {
             day:"Чт",
             day_info:"28 авг",
-            icon_id:"mainly_cloudy",
+            icon_id:"облачно с прояснениями",
             temp_day:"+18°",
             temp_night:"+15°",
             info:"Облачно",
@@ -68,7 +68,7 @@ const Days = (props: Props) => {
         {
             day:"Пт",
             day_info:"28 авг",
-            icon_id:"mainly_cloudy",
+            icon_id:"облачно с прояснениями",
             temp_day:"+18°",
             temp_night:"+15°",
             info:"Облачно",

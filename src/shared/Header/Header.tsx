@@ -2,13 +2,23 @@ import React, { useEffect, useState } from 'react'
 import GlobalSvgSelector from '../../assets/icons/global/GlobalSvgSelector'
 import s from './Header.module.scss'
 import Select from 'react-select'
-import SingleValue from 'react-select/dist/declarations/src/components/SingleValue'
 import { useTheme } from '../../hooks/useTheme'
 import { Theme } from '../../context/ThemeContext'
+import { AppDispatch } from '../../store/store'
+import { City, currentCitySlice } from '../../store/slices/currentCitySlice'
+import { useCustomDispatch } from '../../hooks/store'
 
 type Props = {}
 
 const Header = (props: Props) => {
+    
+    const dispatch = useCustomDispatch();
+    const getCurrentCity = (select: any) => {
+        //console.log(select)
+        dispatch(currentCitySlice.actions.getCurrentCity(select))
+    }
+    
+
     const theme = useTheme()
     const options = [
         { value: 'city-1', label: 'Санкт-Петербург' },
@@ -68,6 +78,7 @@ const Header = (props: Props) => {
                     <GlobalSvgSelector id='change-theme'/>
                 </div>
                 <Select 
+                    onChange={getCurrentCity}
                     defaultValue={options[0]} 
                     styles={colorStyles} 
                     options={options} 
@@ -79,3 +90,7 @@ const Header = (props: Props) => {
 }
 
 export default Header
+
+function dispatch(arg0: any) {
+    throw new Error('Function not implemented.')
+}

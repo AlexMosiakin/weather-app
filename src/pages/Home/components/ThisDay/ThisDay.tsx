@@ -4,12 +4,17 @@ import GlobalSvgSelector from '../../../../assets/icons/global/GlobalSvgSelector
 import { Weather } from '../../../../store/types/types'
 import s from './ThisDay.module.scss'
 
+
 type Props = {
     weather: Weather
 }
 
 const ThisDay = ({weather}: Props) => {
-
+    let unix_timestamp = weather.dt
+    let date = new Date(unix_timestamp * 1000);
+    let hours = date.getHours();
+    let minutes = "0" + date.getMinutes();
+    
     return (
         <div className={s.this_day}>
             <div className={s.top_block}>
@@ -21,11 +26,11 @@ const ThisDay = ({weather}: Props) => {
                         Сегодня
                     </div>
                 </div>
-                <GlobalSvgSelector id="sun"/>
+                <GlobalSvgSelector id={weather.weather[0].description}/>
             </div>
             <div className={s.bottom_block}>
                 <div className={s.this_time}>
-                    Время: <span>{weather.dt}</span>
+                    Время: <span>{hours + `:`+ minutes.slice(1)}</span>
                 </div>
                 <div className={s.this_city}>
                     Город: <span>{weather.name}</span>
