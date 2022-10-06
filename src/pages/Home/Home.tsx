@@ -7,6 +7,7 @@ import { useCustomDispatch, useCustomSelector } from '../../hooks/store'
 import { fetchCurrentWeather } from '../../store/thunk/fetchCurrentWeather'
 import { useSelector } from 'react-redux'
 import { selectCurrentCityData, selectCurrentWeatherData } from '../../store/selectors'
+import { WeatherService } from '../../services/WeatherService'
 
 interface Props {}
 
@@ -31,7 +32,7 @@ const Home = (props: Props) => {
         <ThisDay weather={weather} />
         <ThisDayInfo weather={weather}/>
       </div>
-        <Days />
+        {/* <Days /> */}
     </div>
   )
 }
