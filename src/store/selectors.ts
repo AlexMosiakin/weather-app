@@ -5,3 +5,6 @@ export const selectCurrentWeatherData = (state: RootState) =>
 
 export const selectCurrentCityData = (state: RootState) => 
     state.currentCitySliceReducer
+
+export const selectForecastData = (state: RootState) => 
+    state.forecastSliceReducer

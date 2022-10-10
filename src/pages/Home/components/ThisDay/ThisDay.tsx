@@ -26,7 +26,7 @@ const ThisDay = ({weather}: Props) => {
                         Сегодня
                     </div>
                 </div>
-                <GlobalSvgSelector id={weather.weather[0].description}/>
+                <GlobalSvgSelector id={weather.weather[0].icon}/>
             </div>
             <div className={s.bottom_block}>
                 <div className={s.this_time}>

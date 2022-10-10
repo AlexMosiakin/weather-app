@@ -2,8 +2,15 @@ import React from 'react'
 import s from './Days.module.scss'
 import Card from './Card'
 import Tabs from './Tabs'
+import { Weather } from '../../../../store/types/types'
+import moment from 'moment'
+import 'moment/locale/ru'
 
-type Props = {}
+type Props = {
+    forecast: Weather[],
+    today: Weather,
+    getPopupData: (weather: Weather) => void,
+}
 
 export type Day = {
     day:string,
@@ -14,76 +21,61 @@ export type Day = {
     info:string,
 }
 
+moment.locale('ru')
 
-const Days = (props: Props) => {
-    const days: Day[] = [
-        {
-            day:"Сегодня",
-            day_info:"28 авг",
-            icon_id:"sun",
-            temp_day:"+18°",
-            temp_night:"+15°",
-            info:"Облачно",
-        },
-        {
-            day:"Завтра",
-            day_info:"29 авг",
-            icon_id:"пасмурно_sun",
-            temp_day:"+15°",
-            temp_night:"+10°",
-            info:"Небольшой дождь",
-        },
-        {
-            day:"Пн",
-            day_info:"28 авг",
-            icon_id:"пасмурно",
-            temp_day:"+18°",
-            temp_night:"+15°",
-            info:"Облачно",
-        },
-        {
-            day:"Вт",
-            day_info:"28 авг",
-            icon_id:"облачно с прояснениями",
-            temp_day:"+18°",
-            temp_night:"+15°",
-            info:"Облачно",
-        },
-        {
-            day:"Ср",
-            day_info:"28 авг",
-            icon_id:"облачно с прояснениями",
-            temp_day:"+18°",
-            temp_night:"+15°",
-            info:"Облачно",
-        },
-        {
-            day:"Чт",
-            day_info:"28 авг",
-            icon_id:"облачно с прояснениями",
-            temp_day:"+18°",
-            temp_night:"+15°",
-            info:"Облачно",
-        },
-        {
-            day:"Пт",
-            day_info:"28 авг",
-            icon_id:"облачно с прояснениями",
-            temp_day:"+18°",
-            temp_night:"+15°",
-            info:"Облачно",
-        }, 
+const Days = ({ forecast, today, getPopupData }: Props) => {
+    let daysData:Weather[] = [
+
     ]
-  return (
-    <>
-        <Tabs />
-        <div className={s.days}>
-                {daysData.map((item, index) => )}
-                <Card key={index} cardDay={item}/>
-            )}
-        </div>
-    </>
-  )
+
+    forecast.forEach((day) => {
+        let currentDay = moment(day.dt * 1000).format('dddd')
+        if(currentDay === 'понедельник'){
+            if(moment(day.dt * 1000).hours() === 12){
+                daysData.push(day)
+            }
+        }
+        if(currentDay === 'вторник'){
+            if(moment(day.dt * 1000).hours() === 12){
+                daysData.push(day)
+            }
+        }
+        if(currentDay === 'среда'){
+            if(moment(day.dt * 1000).hours() === 12){
+                daysData.push(day)
+            }
+        }
+        if(currentDay === 'четверг'){
+            if(moment(day.dt * 1000).hours() === 12){
+                daysData.push(day)
+            }
+        }
+        if(currentDay === 'пятница'){
+            if(moment(day.dt * 1000).hours() === 12){
+                daysData.push(day)
+            }
+        }
+        if(currentDay === 'суббота'){
+            if(moment(day.dt * 1000).hours() === 12){
+                daysData.push(day)
+            }
+        }
+        if(currentDay === 'воскресенье'){
+            if(moment(day.dt * 1000).hours() === 12){
+                daysData.push(day)
+            }
+        }
+    })
+
+    return (
+        <>
+            <Tabs />
+            <div className={s.days}>
+                <Card cardDay={today} isToday getPopupData={getPopupData}/>
+                {daysData.map((item, index) => <Card key={index} cardDay={item} getPopupData={getPopupData}/>)}
+            </div>
+        </>
+    )
 }
 
 export default Days

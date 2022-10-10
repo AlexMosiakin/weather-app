@@ -21,4 +21,9 @@ export type Weather = {
         deg: number,
         speed: number
     }
+    day?: string,
+}
+
+export type ForecastList = {
+    list: Weather[],
 }

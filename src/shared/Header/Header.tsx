@@ -14,7 +14,6 @@ const Header = (props: Props) => {
     
     const dispatch = useCustomDispatch();
     const getCurrentCity = (select: any) => {
-        //console.log(select)
         dispatch(currentCitySlice.actions.getCurrentCity(select))
     }
     
