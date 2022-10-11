@@ -34,6 +34,7 @@
 }
 
 .close{
+    display: flex;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -62,6 +63,10 @@
         line-height: 30px;
         color: var(#{--text-color-default});
         margin-bottom: 12px;
+
+        &::first-letter {
+            text-transform:capitalize;
+        }
     }
 
     .img{
@@ -77,5 +82,32 @@
         font-size: 15px;
         line-height: 18px;
         color: $base-color;
+    }
+}
+
+@media screen and (max-width:1060px) {
+    .popup{
+        max-width: 724px;
+    }
+}
+
+@media screen and (max-width: 784px){
+    .popup{
+        max-width: 500px;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .day{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .this_day_info_items{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .popup{
+        max-width: 90%;
     }
 }

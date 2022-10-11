@@ -8,6 +8,7 @@
     background: var(#{--components-background-default});
     box-shadow: var(#{--card-shadow-default});
     border-radius: $border-radius;
+    overflow: hidden;
     .this_day_info_items{
         z-index: 1;
         position: relative;
@@ -54,4 +55,35 @@
     right: 0;
     z-index: 0;
     pointer-events: none;
+}
+
+@media screen and (max-width:1250px) {
+    .this_day_info{
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width:1060px) {
+    .cloud_img{
+        width: 50%;
+    }
+    .this_day_info{
+        max-width: 400px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 784px){
+    .this_day_info{
+        max-width: 100%;
+        padding: 20px;
+    }
+    .cloud_img{
+        display: none;
+    }
+    .item{
+        .indicator, .indicator_name{
+            margin-right: 10px;
+        }
+    }
 }

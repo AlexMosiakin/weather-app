@@ -20,21 +20,23 @@ const Header = (props: Props) => {
 
     const theme = useTheme()
     const options = [
-        { value: 'city-1', label: 'Санкт-Петербург' },
-        { value: 'city-2', label: 'Москва' },
-        { value: 'city-3', label: 'Нижний Новгород' }
+        { value: 'city-1', label: 'Москва' },
+        { value: 'city-2', label: 'Лондон' },
+        { value: 'city-3', label: 'Милан' },
+        { value: 'city-4', label: 'Нью-Йорк' },
+        { value: 'city-5', label: 'Берлин' },
     ]
 
     const colorStyles = {
         control: (styles: any) => ({
             ...styles,
             backgroundColor: theme.theme == 'dark' ? '#4f4f4f' : 'rgba(71, 147, 255, 0.2)',
-            width: '194px',
             height: '37px',
             border: 'none',
             borderRadius: '10px',
             zIndex: 100,
             position:'relative',
+            cursor: 'pointer',
         }),
         singleValue: (styles: any) => ({
             ...styles,
@@ -50,6 +52,7 @@ const Header = (props: Props) => {
             ...provided,
             backgroundColor: state.isFocused ? 'inherit' : 'inherit',
             color: state.isFocused ? '#4793ff' : 'inherit',
+            cursor: 'pointer',
         })
     }
 
@@ -69,7 +72,7 @@ const Header = (props: Props) => {
                 <div className={s.logo}>
                     <GlobalSvgSelector id='header-logo'/>
                 </div>
-                <div className={s.title}>React weather</div>
+                <div className={s.title}>Сеноптикум</div>
             </div>
 
             <div className={s.wrapper}>

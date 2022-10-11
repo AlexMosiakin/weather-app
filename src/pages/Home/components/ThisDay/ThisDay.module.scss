@@ -43,3 +43,42 @@
     }
 }
 
+@media screen and (max-width:1250px) {
+    .this_day{
+        max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width:1060px) {
+    .top_block{
+        margin-bottom: 20px;
+
+        .this_temp{
+            font-size: 72px;
+        }
+
+        .this_day_name{
+            font-size: 32px;
+        }
+
+        svg{
+            width: 110px;
+            height: 110px;
+        }
+    }
+    .bottom_block{
+        .this_time, .this_city{
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 784px){
+    .this_day{
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+

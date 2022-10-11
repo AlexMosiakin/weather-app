@@ -24,12 +24,12 @@ const ThisDayInfo = ({weather}: Props) => {
     {
         icon_id: 'pressure',
         name : 'Давление ',
-        value: `${Math.floor(weather.main.pressure)} мм ртутного столба - нормальное`
+        value: `${Math.floor(weather.main.pressure)} мм ртутного столба`
     },
     {
         icon_id: 'precipitation',
-        name : 'Осадки',
-        value: `${weather.weather[0].description}`
+        name : 'Влажность',
+        value: `${weather.main.humidity}%`
     },
     {
         icon_id: 'wind',

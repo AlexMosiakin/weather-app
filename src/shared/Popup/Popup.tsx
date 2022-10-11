@@ -19,24 +19,25 @@ const Popup = ({isOpen, popupData, setIsPopupOpen, city}: Props) => {
         {
             icon_id: 'temp',
             name : 'Температура',
-            value: '20° - ощущается как 17°'
+            value: `${Math.floor(popupData.main.temp)}° - ощущается как ${Math.floor(popupData.main.feels_like)}°`
         },
         {
             icon_id: 'pressure',
             name : 'Давление ',
-            value: '765 мм ртутного столба - нормальное'
+            value: `${popupData.main.pressure} мм ртутного столба`
         },
         {
             icon_id: 'precipitation',
-            name : 'Осадки',
-            value: 'Без осадков'
+            name : 'Влажность',
+            value: `${popupData.main.humidity}%`
         },
         {
             icon_id: 'wind',
             name : 'Ветер',
-            value: '3 м/с юго-запад - легкий ветер'
+            value: `${popupData.wind.speed} м/с`
         },
-        ]
+    ]
+
     return (
         <div className={isOpen ? s.blur : s.blur + ' ' + s.hide}>
             <div className={s.popup}>
@@ -54,8 +55,8 @@ const Popup = ({isOpen, popupData, setIsPopupOpen, city}: Props) => {
                     </div>
                 </div>
                 <div className={s.this_day_info_items}>
-                    {popupData.weather.map((item: any) => 
-                        <ThisDayItem key={item.icon_id} item={item} />
+                    {items.map((item: any, index: number) => 
+                        <ThisDayItem key={index} item={item} />
                     )}
                 </div>
                 <div className={s.close} onClick={() => setIsPopupOpen(false)}>

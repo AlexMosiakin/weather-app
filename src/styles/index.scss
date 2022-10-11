@@ -20,15 +20,39 @@ body{
 ::-webkit-scrollbar {
     width: 8px;
     transition: 0.5s;
-  }
+}
   
-  ::-webkit-scrollbar-track {
-    background: var(#{text-color-default});
-    transition: 0.5s;
-  }
+::-webkit-scrollbar-track {
+  background: var(#{text-color-default});
+  transition: 0.5s;
+}
   
-  ::-webkit-scrollbar-thumb {
-    background: #4793ff;
-    border-radius: 8px;
-    transition: 0.5s;
+::-webkit-scrollbar-thumb {
+  background: #4793ff;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width:1250px) {
+  .container{
+    max-width: 1000px;
   }
+}
+
+@media screen and (max-width:1060px) {
+  .container{
+    max-width: 724px;
+  }
+}
+
+@media screen and (max-width: 784px){
+  .container {
+      max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 784px){
+  .container {
+      max-width: 90%;
+  }
+}

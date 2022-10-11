@@ -27,3 +27,7 @@ export type Weather = {
 export type ForecastList = {
     list: Weather[],
 }
+
+export type City = {
+    name: string
+}

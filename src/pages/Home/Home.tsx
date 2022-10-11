@@ -15,7 +15,7 @@ import { Weather } from '../../store/types/types'
 interface Props {}
 
 const Home = (props: Props) => {
-  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(true)
+  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false)
   const [popupData, setPopupData] = useState<Weather>({
     dt: 1653837921,
     main:{

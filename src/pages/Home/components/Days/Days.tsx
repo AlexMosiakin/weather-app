@@ -69,7 +69,7 @@ const Days = ({ forecast, today, getPopupData }: Props) => {
 
     return (
         <>
-            <Tabs />
+            {/* <Tabs /> */}
             <div className={s.days}>
                 <Card cardDay={today} isToday getPopupData={getPopupData}/>
                 {daysData.map((item, index) => <Card key={index} cardDay={item} getPopupData={getPopupData}/>)}
