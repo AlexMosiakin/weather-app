@@ -11,8 +11,8 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/month-statistics" element={<MonthStatistics />}/>
+          <Route path="/weather-app" element={<Home />}/>
+          {/* <Route path="/month-statistics" element={<MonthStatistics />}/> */}
         </Routes>
     </div>
     </div>

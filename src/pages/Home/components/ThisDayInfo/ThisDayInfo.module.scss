@@ -87,3 +87,19 @@
         }
     }
 }
+
+@media screen and (max-width: 550px){
+    .item{
+        .indicator{
+            width: 38px;
+            height: 38px;
+            svg{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .indicator_name{
+            display: none;
+        }
+    }
+  }
