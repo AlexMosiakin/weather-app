@@ -20,11 +20,11 @@ const Header = (props: Props) => {
 
     const theme = useTheme()
     const options = [
-        { value: 'city-1', label: 'Москва' },
-        { value: 'city-2', label: 'Лондон' },
-        { value: 'city-3', label: 'Милан' },
-        { value: 'city-4', label: 'Нью-Йорк' },
-        { value: 'city-5', label: 'Берлин' },
+        { value: 'city-1', label: 'Paris' },
+        { value: 'city-2', label: 'London' },
+        { value: 'city-3', label: 'Milan' },
+        { value: 'city-4', label: 'New York' },
+        { value: 'city-5', label: 'Berlin' },
     ]
 
     const colorStyles = {
@@ -37,6 +37,7 @@ const Header = (props: Props) => {
             zIndex: 100,
             position:'relative',
             cursor: 'pointer',
+            minWidth: '150px',
         }),
         singleValue: (styles: any) => ({
             ...styles,
@@ -72,7 +73,7 @@ const Header = (props: Props) => {
                 <div className={s.logo}>
                     <GlobalSvgSelector id='header-logo'/>
                 </div>
-                <div className={s.title}>Сеноптикум</div>
+                <div className={s.title}>Weather</div>
             </div>
 
             <div className={s.wrapper}>
@@ -92,7 +93,3 @@ const Header = (props: Props) => {
 }
 
 export default Header
-
-function dispatch(arg0: any) {
-    throw new Error('Function not implemented.')
-}

@@ -18,23 +18,23 @@ const ThisDayInfo = ({weather}: Props) => {
     const items = [
     {
         icon_id: 'temp',
-        name : 'Температура',
-        value: `${Math.floor(weather.main.temp)}° - ощущается как ${Math.floor(weather.main.feels_like)}°`
+        name : 'Temperature',
+        value: `${Math.floor(weather.main.temp)}° - feels like ${Math.floor(weather.main.feels_like)}°`
     },
     {
         icon_id: 'pressure',
-        name : 'Давление ',
-        value: `${Math.floor(weather.main.pressure)} мм ртутного столба`
+        name : 'Pressure ',
+        value: `${Math.floor(weather.main.pressure)} mm of mercury column`
     },
     {
         icon_id: 'precipitation',
-        name : 'Влажность',
+        name : 'Precipitation',
         value: `${weather.main.humidity}%`
     },
     {
         icon_id: 'wind',
-        name : 'Ветер',
-        value: `${Math.floor(weather.wind.speed)} м/с`
+        name : 'Wind',
+        value: `${Math.floor(weather.wind.speed)} m/s`
     },
     ]
     

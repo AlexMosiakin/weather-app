@@ -23,17 +23,17 @@ const ThisDay = ({weather}: Props) => {
                         {Math.floor(weather.main.temp)}°
                     </div>
                     <div className={s.this_day_name}>
-                        Сегодня
+                        Today
                     </div>
                 </div>
                 <GlobalSvgSelector id={weather.weather[0].icon}/>
             </div>
             <div className={s.bottom_block}>
                 <div className={s.this_time}>
-                    Время: <span>{hours + `:`+ minutes.slice(1)}</span>
+                    Time: <span>{hours + `:`+ minutes.slice(1)}</span>
                 </div>
                 <div className={s.this_city}>
-                    Город: <span>{weather.name}</span>
+                    City: <span>{weather.name}</span>
                 </div>
             </div>
         </div>

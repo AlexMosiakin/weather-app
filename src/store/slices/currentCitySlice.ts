@@ -7,7 +7,7 @@ export type City = {
 
 const initialState: City = {
     value: 'city-1',
-    label: 'Москва',
+    label: 'Paris',
 }
 
 export const currentCitySlice = createSlice({

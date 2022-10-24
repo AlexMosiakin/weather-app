@@ -5,7 +5,6 @@ import s from './Popup.module.scss'
 import GlobalSvgSelector from '../../assets/icons/global/GlobalSvgSelector'
 import { Weather } from '../../store/types/types';
 import moment from 'moment'
-import 'moment/locale/ru'
 
 type Props = {
     isOpen: boolean,
@@ -18,23 +17,23 @@ const Popup = ({isOpen, popupData, setIsPopupOpen, city}: Props) => {
     const items = [
         {
             icon_id: 'temp',
-            name : 'Температура',
-            value: `${Math.floor(popupData.main.temp)}° - ощущается как ${Math.floor(popupData.main.feels_like)}°`
+            name : 'Temperature',
+            value: `${Math.floor(popupData.main.temp)}° - feels like ${Math.floor(popupData.main.feels_like)}°`
         },
         {
             icon_id: 'pressure',
-            name : 'Давление ',
-            value: `${popupData.main.pressure} мм ртутного столба`
+            name : 'Pressure',
+            value: `${popupData.main.pressure} mm of mercury column`
         },
         {
             icon_id: 'precipitation',
-            name : 'Влажность',
+            name : 'Precipitation',
             value: `${popupData.main.humidity}%`
         },
         {
             icon_id: 'wind',
-            name : 'Ветер',
-            value: `${popupData.wind.speed} м/с`
+            name : 'Wind',
+            value: `${popupData.wind.speed} m/s`
         },
     ]
 
@@ -48,10 +47,10 @@ const Popup = ({isOpen, popupData, setIsPopupOpen, city}: Props) => {
                         <GlobalSvgSelector id={popupData?.weather[0].icon}/>
                     </div>
                     <div className={s.day_time}>
-                        Время: <span>{moment(popupData.dt * 1000).format('L')}</span>
+                        Time: <span>{moment(popupData.dt * 1000).format('L')}</span>
                     </div>
                     <div className={s.day_city}>
-                        Город: <span>{city}</span>
+                        City: <span>{city}</span>
                     </div>
                 </div>
                 <div className={s.this_day_info_items}>

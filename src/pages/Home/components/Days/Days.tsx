@@ -4,7 +4,6 @@ import Card from './Card'
 import Tabs from './Tabs'
 import { Weather } from '../../../../store/types/types'
 import moment from 'moment'
-import 'moment/locale/ru'
 
 type Props = {
     forecast: Weather[],
@@ -30,37 +29,37 @@ const Days = ({ forecast, today, getPopupData }: Props) => {
 
     forecast.forEach((day) => {
         let currentDay = moment(day.dt * 1000).format('dddd')
-        if(currentDay === 'понедельник'){
+        if(currentDay === 'Monday'){
             if(moment(day.dt * 1000).hours() === 12){
                 daysData.push(day)
             }
         }
-        if(currentDay === 'вторник'){
+        if(currentDay === 'Tuesday'){
             if(moment(day.dt * 1000).hours() === 12){
                 daysData.push(day)
             }
         }
-        if(currentDay === 'среда'){
+        if(currentDay === 'Wednesday'){
             if(moment(day.dt * 1000).hours() === 12){
                 daysData.push(day)
             }
         }
-        if(currentDay === 'четверг'){
+        if(currentDay === 'Thursday'){
             if(moment(day.dt * 1000).hours() === 12){
                 daysData.push(day)
             }
         }
-        if(currentDay === 'пятница'){
+        if(currentDay === 'Friday'){
             if(moment(day.dt * 1000).hours() === 12){
                 daysData.push(day)
             }
         }
-        if(currentDay === 'суббота'){
+        if(currentDay === 'Saturday'){
             if(moment(day.dt * 1000).hours() === 12){
                 daysData.push(day)
             }
         }
-        if(currentDay === 'воскресенье'){
+        if(currentDay === 'Sunday'){
             if(moment(day.dt * 1000).hours() === 12){
                 daysData.push(day)
             }

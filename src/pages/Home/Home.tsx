@@ -26,7 +26,7 @@ const Home = (props: Props) => {
         temp_max: 16.4,
         temp_min: 13.73,
     },
-    name: "Nizhny Novgorod",
+    name: "Paris",
     weather: [
         {
             description: "облачно с прояснениями",
