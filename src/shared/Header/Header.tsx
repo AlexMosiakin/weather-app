@@ -25,6 +25,7 @@ const Header = (props: Props) => {
         { value: 'city-3', label: 'Milan' },
         { value: 'city-4', label: 'New York' },
         { value: 'city-5', label: 'Berlin' },
+        { value: 'city-5', label: 'Moscow' },
     ]
 
     const colorStyles = {
