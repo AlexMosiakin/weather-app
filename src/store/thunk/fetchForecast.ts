@@ -10,11 +10,11 @@ export const fetchForecast = (payload: string) =>
         const res = await WeatherService.getForecast(payload)
 
         if(res.status === 200){
-            dispatch(forecastSlice.actions.
-                fetchForecastSuccess(res))
+            dispatch(forecastSlice.actions
+                .fetchForecastSuccess(res))
         } else{
-            dispatch(forecastSlice.actions.
-                fetchForecastError(res))
+            dispatch(forecastSlice.actions
+                .fetchForecastError(res))
         }
     } catch (error) {
         console.log(error)

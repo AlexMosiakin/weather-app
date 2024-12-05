@@ -5,16 +5,14 @@ import ThisDayInfo from './components/ThisDayInfo/ThisDayInfo'
 import Days from './components/Days/Days'
 import { useCustomDispatch, useCustomSelector } from '../../hooks/store'
 import { fetchCurrentWeather } from '../../store/thunk/fetchCurrentWeather'
-import { useSelector } from 'react-redux'
 import { selectCurrentCityData, selectCurrentWeatherData, selectForecastData } from '../../store/selectors'
-import { WeatherService } from '../../services/WeatherService'
-import { fetchForecast } from '../../store/thunk/fetchForecas'
+import { fetchForecast } from '../../store/thunk/fetchForecast'
 import Popup from '../../shared/Popup/Popup'
 import { Weather } from '../../store/types/types'
 
 interface Props {}
 
-const Home = (props: Props) => {
+const Home = (_props: Props) => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false)
   const [popupData, setPopupData] = useState<Weather>({
     dt: 1653837921,
@@ -63,7 +61,7 @@ const Home = (props: Props) => {
   useEffect(() => {
     dispatch(fetchCurrentWeather(select.label))
     dispatch(fetchForecast(select.label))
-  }, [select])
+  }, [select, dispatch])
 
   return (
     <div className={s.home}>
